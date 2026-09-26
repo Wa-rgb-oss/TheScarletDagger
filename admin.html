@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Private Scarlet Dagger studio administration.">
+  <title>Studio Admin | The Scarlet Dagger</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=DM+Mono:wght@300;400;500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-body">
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <section class="pin-screen" id="pin-screen" aria-labelledby="pin-title">
+    <div class="pin-wall" aria-hidden="true">
+      <span>SCARLET</span><span>DAGGER</span><span>PRIVATE</span><span>ACCESS</span>
+      <span>SCARLET</span><span>DAGGER</span><span>PRIVATE</span><span>ACCESS</span>
+      <span>SCARLET</span><span>DAGGER</span><span>PRIVATE</span><span>ACCESS</span>
+    </div>
+
+    <header class="pin-header">
+      <a class="admin-mini-brand" href="index.html">
+        <small>THE SCARLET DAGGER</small>
+        <strong>STUDIO ADMIN</strong>
+      </a>
+      <span class="access-stamp">PRIVATE ACCESS // 01</span>
+    </header>
+
+    <div class="pin-shell">
+      <div class="pin-copy">
+        <p class="tv-label">AUTHORIZED PERSONNEL ONLY</p>
+        <h1 id="pin-title">ENTER<br><span>PASSCODE</span></h1>
+        <p>Studio requests, client contact information, and appointment status live behind this screen.</p>
+      </div>
+
+      <div class="pin-panel">
+        <p class="pin-prompt">Enter Passcode</p>
+
+        <div class="pin-dots" id="pin-dots" aria-label="Six digit PIN entry">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <p class="pin-message" id="pin-message" role="status" aria-live="polite">6 DIGITS // AUTO SUBMIT</p>
+
+        <div class="pin-keypad" id="pin-keypad" aria-label="Numeric keypad">
+          <button type="button" data-digit="1"><strong>1</strong><small>&nbsp;</small></button>
+          <button type="button" data-digit="2"><strong>2</strong><small>ABC</small></button>
+          <button type="button" data-digit="3"><strong>3</strong><small>DEF</small></button>
+          <button type="button" data-digit="4"><strong>4</strong><small>GHI</small></button>
+          <button type="button" data-digit="5"><strong>5</strong><small>JKL</small></button>
+          <button type="button" data-digit="6"><strong>6</strong><small>MNO</small></button>
+          <button type="button" data-digit="7"><strong>7</strong><small>PQRS</small></button>
+          <button type="button" data-digit="8"><strong>8</strong><small>TUV</small></button>
+          <button type="button" data-digit="9"><strong>9</strong><small>WXYZ</small></button>
+          <span class="keypad-spacer" aria-hidden="true"></span>
+          <button type="button" data-digit="0"><strong>0</strong><small>&nbsp;</small></button>
+          <button type="button" class="pin-delete" id="pin-delete" aria-label="Delete last digit"><strong>⌫</strong><small>DEL</small></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pin-ticker" aria-hidden="true">
+      <span>THE SCARLET DAGGER</span><span>✦</span><span>PRIVATE STUDIO DATABASE</span><span>✦</span><span>NO PUBLIC ACCESS</span>
+    </div>
+  </section>
+
+  <section class="admin-app" id="admin-app" hidden>
+    <header class="admin-header">
+      <div>
+        <span class="section-kicker">THE SCARLET DAGGER // PRIVATE</span>
+        <h1>REQUEST<br>CONTROL.</h1>
+      </div>
+      <div class="admin-header-actions">
+        <span class="admin-session-light"><i></i> SESSION ACTIVE</span>
+        <button type="button" class="admin-logout" id="admin-logout">LOCK ADMIN</button>
+      </div>
+    </header>
+
+    <main class="admin-main">
+      <section class="admin-stats" aria-label="Request totals">
+        <article><span>NEW</span><strong id="count-new">0</strong></article>
+        <article><span>REVIEWING</span><strong id="count-reviewing">0</strong></article>
+        <article><span>CONTACTED</span><strong id="count-contacted">0</strong></article>
+        <article><span>BOOKED</span><strong id="count-booked">0</strong></article>
+      </section>
+
+      <section class="admin-toolbar">
+        <div class="admin-tabs" id="admin-tabs">
+          <button class="active" type="button" data-filter="all">ALL</button>
+          <button type="button" data-filter="new">NEW</button>
+          <button type="button" data-filter="reviewing">REVIEWING</button>
+          <button type="button" data-filter="contacted">CONTACTED</button>
+          <button type="button" data-filter="booked">BOOKED</button>
+          <button type="button" data-filter="declined">DECLINED</button>
+          <button type="button" data-filter="archived">ARCHIVED</button>
+        </div>
+
+        <label class="admin-search">
+          <span>SEARCH</span>
+          <input id="admin-search" type="search" placeholder="Name, concept, placement…">
+        </label>
+      </section>
+
+      <p class="admin-load-message" id="admin-load-message" role="status"></p>
+      <section class="request-list" id="request-list" aria-live="polite"></section>
+    </main>
+
+    <div class="request-modal" id="request-modal" hidden>
+      <button type="button" class="modal-scrim" id="modal-scrim" aria-label="Close request details"></button>
+      <article class="request-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-name">
+        <div class="drawer-top">
+          <div>
+            <span class="drawer-kicker">TATTOO REQUEST // CLIENT FILE</span>
+            <h2 id="drawer-name">CLIENT</h2>
+          </div>
+          <button type="button" class="drawer-close" id="drawer-close" aria-label="Close">×</button>
+        </div>
+
+        <div class="drawer-status-row">
+          <span id="drawer-date">SUBMITTED</span>
+          <label>
+            STATUS
+            <select id="drawer-status">
+              <option value="new">NEW</option>
+              <option value="reviewing">REVIEWING</option>
+              <option value="contacted">CONTACTED</option>
+              <option value="booked">BOOKED</option>
+              <option value="declined">DECLINED</option>
+              <option value="archived">ARCHIVED</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="drawer-actions" id="drawer-actions"></div>
+
+        <div class="drawer-grid">
+          <div class="drawer-field"><span>PLACEMENT</span><p id="drawer-placement"></p></div>
+          <div class="drawer-field"><span>SIZE</span><p id="drawer-size"></p></div>
+          <div class="drawer-field"><span>AVAILABILITY</span><p id="drawer-availability"></p></div>
+          <div class="drawer-field"><span>BUDGET</span><p id="drawer-budget"></p></div>
+        </div>
+
+        <div class="drawer-field drawer-concept">
+          <span>THE IDEA</span>
+          <p id="drawer-concept"></p>
+        </div>
+
+        <div class="drawer-contact">
+          <div><span>EMAIL</span><p id="drawer-email"></p></div>
+          <div><span>PHONE</span><p id="drawer-phone"></p></div>
+          <div><span>INSTAGRAM</span><p id="drawer-instagram"></p></div>
+          <div><span>PREFERRED CONTACT</span><p id="drawer-preferred"></p></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <script src="admin.js"></script>
+</body>
+</html>
