@@ -853,6 +853,7 @@ input[type="radio"],input[type="checkbox"]{accent-color:var(--red)}
   min-height:100vh;
   background:#050505;
 }
+.pin-screen[hidden]{display:none!important;}
 .pin-screen{
   min-height:100svh;
   position:relative;
