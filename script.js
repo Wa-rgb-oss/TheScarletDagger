@@ -7,12 +7,14 @@ const siteNav = document.querySelector(".site-nav");
 navToggle?.addEventListener("click", () => {
   const isOpen = siteNav.classList.toggle("open");
   navToggle.setAttribute("aria-expanded", String(isOpen));
+  document.body.classList.toggle("nav-open", isOpen);
 });
 
 siteNav?.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
     siteNav.classList.remove("open");
     navToggle?.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("nav-open");
   });
 });
 
@@ -88,5 +90,14 @@ form?.addEventListener("submit", async (event) => {
     setStatus("Something went wrong sending the request. Please try again or use the Venue Ink link above.", "error");
   } finally {
     submitButton.disabled = false;
+  }
+});
+
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 720) {
+    siteNav?.classList.remove("open");
+    navToggle?.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("nav-open");
   }
 });
