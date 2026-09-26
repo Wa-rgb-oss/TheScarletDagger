@@ -2049,9 +2049,9 @@ main,section,article,aside,header,footer,nav,div{min-width:0}
     z-index:3;
     margin:
       calc(-18px - env(safe-area-inset-top))
-      max(-18px,-1 * env(safe-area-inset-right))
+      -18px
       18px
-      max(-18px,-1 * env(safe-area-inset-left));
+      -18px;
     padding:
       calc(18px + env(safe-area-inset-top))
       max(18px,env(safe-area-inset-right))
