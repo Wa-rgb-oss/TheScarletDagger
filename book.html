@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Submit a tattoo request to Annabella Tessier at The Scarlet Dagger.">
+  <title>Booking | The Scarlet Dagger</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=DM+Mono:wght@300;400;500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-kicker">PRIVATE STUDIO // EST. 2025</span><strong>THE SCARLET DAGGER</strong></a>
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav class="site-nav"><a href="work.html">WORK</a><a href="studio.html">STUDIO</a><a href="before-you-book.html">BEFORE YOU BOOK</a><a class="nav-cta" href="book.html">BOOKING</a></nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="page-intro">
+      <span class="tv-label">CHANNEL 03 // REQUEST LINE OPEN</span>
+      <h1>MAKE THE<br><span class="goth">call.</span></h1>
+      <p>This sends a real tattoo request to The Scarlet Dagger database. It is not an automatic appointment. Annabella reviews the project first and follows up using your preferred contact method.</p>
+    </section>
+
+    <section class="page-section booking-layout">
+      <aside class="booking-aside">
+        <p class="section-kicker">BEFORE TRANSMITTING</p>
+        <h2>GIVE US<br>THE GOOD<br>DETAILS.</h2>
+        <p>The more specific the request is, the easier it is for Annabella to understand the idea and decide whether it fits the studio.</p>
+        <div class="booking-note">
+          <strong>WHAT HELPS MOST</strong>
+          <span>→ Clear concept</span>
+          <span>→ Placement + approximate size</span>
+          <span>→ General availability</span>
+          <span>→ Realistic budget</span>
+          <span>→ Instagram handle if you use it</span>
+        </div>
+        <p><a class="venue-link" href="before-you-book.html">READ THE POLICIES FIRST ↗</a></p>
+        <p><a class="venue-link" href="https://venue.ink/@rougecowboyink" target="_blank" rel="noopener noreferrer">PREFER VENUE INK? GO THERE ↗</a></p>
+      </aside>
+
+      <form class="booking-form" id="booking-form">
+        <div class="form-grid">
+          <label><span>NAME *</span><input name="full_name" type="text" autocomplete="name" required maxlength="120" placeholder="Your full name"></label>
+          <label><span>EMAIL *</span><input name="email" type="email" autocomplete="email" required maxlength="320" placeholder="you@example.com"></label>
+          <label><span>PHONE</span><input name="phone" type="tel" autocomplete="tel" maxlength="40" placeholder="(000) 000-0000"></label>
+          <label><span>INSTAGRAM</span><input name="instagram" type="text" maxlength="120" placeholder="@username"></label>
+          <label><span>PLACEMENT *</span><input name="placement" type="text" required maxlength="160" placeholder="Example: outer forearm"></label>
+          <label><span>APPROXIMATE SIZE *</span><input name="approx_size" type="text" required maxlength="120" placeholder="Example: 4–6 inches"></label>
+        </div>
+
+        <label><span>TELL US ABOUT THE TATTOO *</span><textarea name="concept" required minlength="10" maxlength="3000" rows="7" placeholder="Describe the concept, important details, style direction, and anything you definitely do or do not want."></textarea></label>
+
+        <div class="form-grid">
+          <label><span>AVAILABILITY *</span><textarea name="availability" required maxlength="1000" rows="4" placeholder="Days, time ranges, or scheduling limits."></textarea></label>
+          <label><span>BUDGET</span><textarea name="budget" maxlength="120" rows="4" placeholder="Optional, but helpful."></textarea></label>
+        </div>
+
+        <fieldset>
+          <legend>PREFERRED CONTACT *</legend>
+          <div class="radio-row">
+            <label><input type="radio" name="preferred_contact" value="email" checked> EMAIL</label>
+            <label><input type="radio" name="preferred_contact" value="phone"> PHONE</label>
+            <label><input type="radio" name="preferred_contact" value="instagram"> INSTAGRAM</label>
+          </div>
+        </fieldset>
+
+        <label class="checkbox-row"><input name="terms_accepted" type="checkbox" required><span>I understand this is a tattoo request, not a confirmed appointment, and I have reviewed the Before You Book policies.</span></label>
+
+        <button class="button glitch-button submit-button" type="submit"><span>TRANSMIT REQUEST</span><span>↗</span></button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div><strong>THE SCARLET DAGGER</strong><span>PRIVATE TATTOO STUDIO</span></div><p>BLACK + GRAY // ILLUSTRATIVE // BY APPOINTMENT</p><a href="index.html">HOME ↗</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
