@@ -18,7 +18,7 @@ const statusSelect = document.getElementById("drawer-status");
 
 let pin = "";
 let busy = false;
-let sessionToken = sessionStorage.getItem("scarlet_admin_session") || "";
+let sessionToken = "";
 let requests = [];
 let activeFilter = "all";
 let activeRequestId = null;
@@ -89,7 +89,6 @@ async function submitPin() {
   try {
     const result = await api("unlock", { pin }, "");
     sessionToken = result.token;
-    sessionStorage.setItem("scarlet_admin_session", sessionToken);
     pinScreen.classList.add("unlocking");
     setTimeout(() => showAdmin(), 220);
   } catch (error) {
@@ -139,13 +138,39 @@ async function showAdmin() {
   await loadRequests();
 }
 
+function clearPrivateData() {
+  requests = [];
+  activeRequestId = null;
+  requestList.innerHTML = "";
+  loadMessage.textContent = "";
+  searchInput.value = "";
+  activeFilter = "all";
+  tabs.querySelectorAll("button").forEach((tab) => {
+    tab.classList.toggle("active", tab.dataset.filter === "all");
+  });
+  ["count-new", "count-reviewing", "count-contacted", "count-booked"].forEach((id) => {
+    document.getElementById(id).textContent = "0";
+  });
+  [
+    "drawer-name","drawer-date","drawer-placement","drawer-size",
+    "drawer-availability","drawer-budget","drawer-concept","drawer-email",
+    "drawer-phone","drawer-instagram","drawer-preferred"
+  ].forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = "";
+  });
+  document.getElementById("drawer-actions").innerHTML = "";
+}
+
 function returnToPin(message = "SESSION LOCKED") {
   sessionToken = "";
-  sessionStorage.removeItem("scarlet_admin_session");
+  closeRequest();
+  clearPrivateData();
   adminApp.hidden = true;
   pinScreen.hidden = false;
   pinScreen.classList.remove("unlocking");
   document.body.classList.remove("admin-unlocked");
+  window.scrollTo(0, 0);
   resetPin(message, false);
 }
 
@@ -332,19 +357,11 @@ logoutButton?.addEventListener("click", async () => {
   returnToPin("ADMIN LOCKED // ENTER PASSCODE");
 });
 
-(async function boot() {
+(function boot() {
+  clearPrivateData();
+  adminApp.hidden = true;
+  pinScreen.hidden = false;
+  document.body.classList.remove("admin-unlocked");
   renderDots();
-  if (!sessionToken) return;
-
-  try {
-    const result = await api("list");
-    requests = result.requests || [];
-    pinScreen.hidden = true;
-    adminApp.hidden = false;
-    document.body.classList.add("admin-unlocked");
-    renderStats();
-    renderRequests();
-  } catch {
-    returnToPin("ENTER PASSCODE");
-  }
+  window.scrollTo(0, 0);
 })();
