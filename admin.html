@@ -9,7 +9,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=DM+Mono:wght@300;400;500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=admin-20260926-3">
+  <style>
+    html, body { margin: 0; background: #050505; }
+    body:not(.admin-unlocked) { height: 100svh; overflow: hidden; }
+    #admin-app { display: none !important; }
+    body.admin-unlocked #admin-app { display: block !important; }
+    #pin-screen[hidden] { display: none !important; }
+  </style>
 </head>
 <body class="admin-body">
   <div class="scanlines" aria-hidden="true"></div>
@@ -67,7 +74,7 @@
     </div>
   </section>
 
-  <section class="admin-app" id="admin-app" hidden>
+  <section class="admin-app" id="admin-app" hidden aria-hidden="true">
     <header class="admin-header">
       <div>
         <span class="section-kicker">THE SCARLET DAGGER // PRIVATE</span>
@@ -158,6 +165,6 @@
     </div>
   </section>
 
-  <script src="admin.js"></script>
+  <script src="admin.js?v=admin-20260926-3"></script>
 </body>
 </html>
