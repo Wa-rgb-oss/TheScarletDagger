@@ -132,9 +132,11 @@ document.addEventListener("keydown", (event) => {
 });
 
 async function showAdmin() {
-  pinScreen.hidden = true;
-  adminApp.hidden = false;
   document.body.classList.add("admin-unlocked");
+  adminApp.hidden = false;
+  adminApp.setAttribute("aria-hidden", "false");
+  pinScreen.hidden = true;
+  window.scrollTo(0, 0);
   await loadRequests();
 }
 
@@ -166,10 +168,11 @@ function returnToPin(message = "SESSION LOCKED") {
   sessionToken = "";
   closeRequest();
   clearPrivateData();
+  document.body.classList.remove("admin-unlocked");
   adminApp.hidden = true;
+  adminApp.setAttribute("aria-hidden", "true");
   pinScreen.hidden = false;
   pinScreen.classList.remove("unlocking");
-  document.body.classList.remove("admin-unlocked");
   window.scrollTo(0, 0);
   resetPin(message, false);
 }
@@ -359,9 +362,10 @@ logoutButton?.addEventListener("click", async () => {
 
 (function boot() {
   clearPrivateData();
-  adminApp.hidden = true;
-  pinScreen.hidden = false;
   document.body.classList.remove("admin-unlocked");
+  adminApp.hidden = true;
+  adminApp.setAttribute("aria-hidden", "true");
+  pinScreen.hidden = false;
   renderDots();
   window.scrollTo(0, 0);
 })();
