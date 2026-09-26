@@ -853,11 +853,18 @@ input[type="radio"],input[type="checkbox"]{accent-color:var(--red)}
   min-height:100vh;
   background:#050505;
 }
-.pin-screen[hidden]{display:none!important;}
-.pin-screen{
-  min-height:100svh;
-  position:relative;
+.admin-body:not(.admin-unlocked){
+  height:100svh;
   overflow:hidden;
+}
+.pin-screen[hidden]{display:none!important;}
+.admin-app[hidden]{display:none!important;}
+.pin-screen{
+  position:fixed;
+  inset:0;
+  z-index:110;
+  min-height:100svh;
+  overflow:auto;
   background:
     radial-gradient(circle at 72% 35%,rgba(77,28,123,.8),transparent 30%),
     linear-gradient(145deg,#050505 0%,#0b0710 55%,#170a22 100%);
