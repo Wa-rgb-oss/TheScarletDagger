@@ -84,7 +84,7 @@ form?.addEventListener("submit", async (event) => {
     form.reset();
     const emailRadio = form.querySelector('input[name="preferred_contact"][value="email"]');
     if (emailRadio) emailRadio.checked = true;
-    setStatus("Request received. Annabella can review it from the studio database.", "success");
+    setStatus("Request received! Annabella will review your idea and reach out if she’d like to move forward.", "success");
   } catch (error) {
     console.error(error);
     setStatus("Something went wrong sending the request. Please try again or use the Venue Ink link above.", "error");
