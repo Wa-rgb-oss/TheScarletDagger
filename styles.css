@@ -2118,3 +2118,8 @@ main,section,article,aside,header,footer,nav,div{min-width:0}
   .keypad-spacer{display:none}
   .pin-ticker{min-height:34px}
 }
+
+
+@media(max-width:720px){
+  body.nav-open{overflow:hidden;}
+}
