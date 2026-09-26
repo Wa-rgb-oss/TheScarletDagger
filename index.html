@@ -3,181 +3,148 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The Scarlet Dagger is a private tattoo studio by Annabella Tessier specializing in black and gray illustrative work.">
+  <meta name="description" content="The Scarlet Dagger is Annabella Tessier's private tattoo studio for black and gray illustrative work.">
   <title>The Scarlet Dagger | Private Tattoo Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=DM+Mono:wght@300;400;500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="page-home">
+  <div class="scanlines" aria-hidden="true"></div>
+
   <header class="site-header">
-    <a class="brand" href="#top">
-      <span class="brand-mark">†</span>
-      <span><strong>The Scarlet Dagger</strong><small>Private Tattoo Studio</small></span>
+    <a class="brand" href="index.html">
+      <span class="brand-kicker">PRIVATE STUDIO // EST. 2025</span>
+      <strong>THE SCARLET DAGGER</strong>
     </a>
     <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
     <nav class="site-nav">
-      <a href="#work">Work</a>
-      <a href="#studio">Studio</a>
-      <a href="#policies">Policies</a>
-      <a class="nav-cta" href="#booking">Request an Appointment</a>
+      <a href="work.html">WORK</a>
+      <a href="studio.html">STUDIO</a>
+      <a href="before-you-book.html">BEFORE YOU BOOK</a>
+      <a class="nav-cta" href="book.html">BOOKING</a>
     </nav>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">Black & Gray · Illustrative · One-on-One</p>
-        <h1>Artwork made<br><em>for your skin.</em></h1>
-        <p class="hero-text">The Scarlet Dagger is a private tattoo studio by Annabella Tessier, built for focused appointments, thoughtful design, and a quieter tattoo experience.</p>
+  <main>
+    <section class="broadcast-hero">
+      <div class="broadcast-wall" aria-hidden="true">
+        <span>SCARLET</span><span>DAGGER</span><span>PRIVATE</span><span>STUDIO</span>
+        <span>SCARLET</span><span>DAGGER</span><span>PRIVATE</span><span>STUDIO</span>
+        <span>SCARLET</span><span>DAGGER</span><span>PRIVATE</span><span>STUDIO</span>
+      </div>
+
+      <div class="hero-stamp stamp-red">BOOKING REQUESTS OPEN</div>
+      <div class="hero-stamp stamp-white">NO WALK-INS</div>
+
+      <div class="broadcast-copy">
+        <p class="tv-label">NOW TRANSMITTING // MARIETTA, GA</p>
+        <h1><span>THE</span> SCARLET<br>DAGGER</h1>
+        <p class="hero-sub">BLACK + GRAY / ILLUSTRATIVE / PRIVATE ONE-ON-ONE TATTOOING</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#booking">Start a Tattoo Request</a>
-          <a class="text-link" href="#work">View the work <span>↘</span></a>
+          <a class="button glitch-button" href="book.html">SEND A TATTOO REQUEST</a>
+          <a class="button ghost-button" href="work.html">VIEW THE WORK</a>
         </div>
       </div>
 
-      <div class="hero-art" aria-hidden="true">
-        <div class="sigil">
-          <div class="sigil-ring"></div>
-          <div class="dagger">
-            <span class="dagger-pommel">◆</span>
-            <span class="dagger-handle"></span>
-            <span class="dagger-guard"></span>
-            <span class="dagger-blade"></span>
-          </div>
-          <div class="sigil-copy"><span>SCARLET</span><span>DAGGER</span></div>
-        </div>
-      </div>
-
-      <div class="hero-footer">
-        <span>By appointment only</span>
-        <span>Private studio</span>
-        <span>Custom work & selected flash</span>
-      </div>
-    </section>
-
-    <section class="section" id="work">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Selected Work</p>
-          <h2>Dark, illustrative,<br>and built to age well.</h2>
-        </div>
-        <p>Portfolio imagery will live front and center here. For now these panels establish the layout for finished tattoos, flash, and Annabella's current design direction.</p>
-      </div>
-
-      <div class="portfolio-grid">
-        <article class="portfolio-card card-tall">
-          <div class="placeholder-art art-one"><span>01</span></div>
-          <div class="portfolio-meta"><strong>Illustrative Botanicals</strong><span>Black & Gray</span></div>
-        </article>
-        <article class="portfolio-card">
-          <div class="placeholder-art art-two"><span>02</span></div>
-          <div class="portfolio-meta"><strong>Ornamental Detail</strong><span>Custom Work</span></div>
-        </article>
-        <article class="portfolio-card">
-          <div class="placeholder-art art-three"><span>03</span></div>
-          <div class="portfolio-meta"><strong>Illustrative Creatures</strong><span>Blackwork</span></div>
-        </article>
-        <article class="portfolio-card card-wide">
-          <div class="placeholder-art art-flash"><span>FLASH</span></div>
-          <div class="portfolio-meta"><strong>Available Flash</strong><span>Ask about current pieces</span></div>
-        </article>
-      </div>
-
-      <div class="venue-note">
-        <p>Already booking through Venue Ink?</p>
-        <a href="https://venue.ink/@rougecowboyink" target="_blank" rel="noopener noreferrer">View Annabella's Venue Ink profile <span>↗</span></a>
-      </div>
-    </section>
-
-    <section class="section studio-section" id="studio">
-      <div class="studio-layout">
-        <div class="studio-copy">
-          <p class="eyebrow">The Studio</p>
-          <h2>A private space<br>without the shop noise.</h2>
-          <p class="lead">Appointments are one-on-one, giving the session room to be collaborative, calm, and focused on the tattoo.</p>
-          <div class="studio-points">
-            <article><span>01</span><h3>Private</h3><p>No crowded lobby or rotating stations. Your appointment is your time.</p></article>
-            <article><span>02</span><h3>Disposable</h3><p>A 100% disposable setup keeps the process straightforward and intentionally clean.</p></article>
-            <article><span>03</span><h3>Collaborative</h3><p>The final design is shaped around placement, flow, longevity, and Annabella's illustrative style.</p></article>
+      <div class="hero-screen" aria-hidden="true">
+        <div class="screen-inner">
+          <div class="screen-noise"></div>
+          <div class="screen-type">
+            <span>ANNABELLA</span>
+            <strong>TESSIER</strong>
+            <small>ARTIST // THE SCARLET DAGGER</small>
           </div>
         </div>
-        <aside class="artist-card">
-          <div class="artist-monogram">AT</div>
-          <p>Artist</p>
-          <h3>Annabella<br>Tessier</h3>
-          <div class="artist-rule"></div>
-          <p>Black and gray illustrative tattooing with an emphasis on intentional composition, soft detail, and character.</p>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section process-section">
-      <div class="section-heading compact"><div><p class="eyebrow">How Booking Works</p><h2>Simple on purpose.</h2></div></div>
-      <div class="process-grid">
-        <article><span>01</span><h3>Send the idea</h3><p>Share the concept, placement, approximate size, budget, and availability.</p></article>
-        <article><span>02</span><h3>Annabella reviews it</h3><p>Your request is reviewed for style fit, scope, and scheduling before a date is offered.</p></article>
-        <article><span>03</span><h3>Secure the date</h3><p>Approved appointments are confirmed with the required non-refundable deposit.</p></article>
-        <article><span>04</span><h3>Get tattooed</h3><p>Show up ready for a focused, one-on-one session in the private studio.</p></article>
-      </div>
-    </section>
-
-    <section class="section policies-section" id="policies">
-      <div class="policies-heading"><p class="eyebrow">Before You Book</p><h2>Policies that keep<br>appointments running smoothly.</h2></div>
-      <div class="policy-list">
-        <details open><summary><span>Deposit</span><span>+</span></summary><p>A $50 non-refundable deposit is required to secure an approved appointment.</p></details>
-        <details><summary><span>Rescheduling & Cancellation</span><span>+</span></summary><p>At least 48 hours notice is required to move a deposit to a rescheduled appointment. With less notice, a new deposit may be required.</p></details>
-        <details><summary><span>Deposit Expiration</span><span>+</span></summary><p>Deposits expire 90 days after payment if an appointment has not been completed or appropriately rescheduled under studio policy.</p></details>
-        <details><summary><span>Design & Placement</span><span>+</span></summary><p>Requests may be adjusted for size, placement, longevity, or style fit. Submitting a request does not guarantee acceptance or an appointment date.</p></details>
-      </div>
-    </section>
-
-    <section class="section booking-section" id="booking">
-      <div class="booking-intro">
-        <p class="eyebrow">Tattoo Request</p>
-        <h2>Tell us what<br>you want to make.</h2>
-        <p>This is a request, not an automatic booking. Annabella will review the details and follow up using your preferred contact method.</p>
-        <div class="booking-callout"><strong>What helps most</strong><span>Clear concept</span><span>Placement + size</span><span>General availability</span><span>Realistic budget</span></div>
-      </div>
-
-      <form class="booking-form" id="booking-form">
-        <div class="form-grid">
-          <label><span>Name *</span><input name="full_name" type="text" autocomplete="name" required maxlength="120" placeholder="Your full name"></label>
-          <label><span>Email *</span><input name="email" type="email" autocomplete="email" required maxlength="320" placeholder="you@example.com"></label>
-          <label><span>Phone</span><input name="phone" type="tel" autocomplete="tel" maxlength="40" placeholder="(000) 000-0000"></label>
-          <label><span>Instagram</span><input name="instagram" type="text" maxlength="120" placeholder="@username"></label>
-          <label><span>Placement *</span><input name="placement" type="text" required maxlength="160" placeholder="Example: outer forearm"></label>
-          <label><span>Approximate size *</span><input name="approx_size" type="text" required maxlength="120" placeholder="Example: 4–6 inches"></label>
+        <div class="lower-third">
+          <span>THE SCARLET DAGGER</span>
+          <span>PRIVATE STUDIO</span>
+          <span>NO REQUESTS? WRONG SHOW.</span>
         </div>
+      </div>
 
-        <label><span>Tell us about the tattoo *</span><textarea name="concept" required minlength="10" maxlength="3000" rows="6" placeholder="Describe the idea, important details, style direction, and anything you definitely do or do not want."></textarea></label>
+      <div class="ticker">
+        <span>BY APPOINTMENT ONLY</span>
+        <span>✦</span>
+        <span>CUSTOM + SELECTED FLASH</span>
+        <span>✦</span>
+        <span>BLACK & GRAY ILLUSTRATIVE</span>
+        <span>✦</span>
+        <span>ONE-ON-ONE STUDIO</span>
+      </div>
+    </section>
 
-        <div class="form-grid">
-          <label><span>Availability *</span><textarea name="availability" required maxlength="1000" rows="4" placeholder="Days, time ranges, or scheduling limits."></textarea></label>
-          <label><span>Budget</span><textarea name="budget" maxlength="120" rows="4" placeholder="Optional, but helpful."></textarea></label>
-        </div>
+    <section class="channel-menu">
+      <a class="channel-card channel-red" href="work.html">
+        <span class="channel-no">01</span>
+        <small>CHANNEL</small>
+        <h2>WORK</h2>
+        <p>Finished tattoos, selected flash, and current design direction.</p>
+        <b>ENTER ↗</b>
+      </a>
+      <a class="channel-card channel-purple" href="studio.html">
+        <span class="channel-no">02</span>
+        <small>CHANNEL</small>
+        <h2>STUDIO</h2>
+        <p>Meet Annabella and see what the private studio experience is built around.</p>
+        <b>ENTER ↗</b>
+      </a>
+      <a class="channel-card channel-paper" href="book.html">
+        <span class="channel-no">03</span>
+        <small>CHANNEL</small>
+        <h2>BOOK</h2>
+        <p>Send the idea, placement, size, budget, and scheduling details for review.</p>
+        <b>ENTER ↗</b>
+      </a>
+    </section>
 
-        <fieldset>
-          <legend>Preferred contact *</legend>
-          <div class="radio-row">
-            <label><input type="radio" name="preferred_contact" value="email" checked> Email</label>
-            <label><input type="radio" name="preferred_contact" value="phone"> Phone</label>
-            <label><input type="radio" name="preferred_contact" value="instagram"> Instagram</label>
-          </div>
-        </fieldset>
+    <section class="before-home">
+      <div class="before-title">
+        <p class="tv-label dark-label">READ THIS FIRST</p>
+        <h2>BEFORE<br>YOU BOOK</h2>
+        <p>Short version: deposits protect the appointment, communication matters, and a request is not automatically a booking.</p>
+        <a class="button black-button" href="before-you-book.html">READ ALL POLICIES</a>
+      </div>
 
-        <label class="checkbox-row"><input name="terms_accepted" type="checkbox" required><span>I understand this is a tattoo request, not a confirmed appointment, and I have reviewed the studio policies above.</span></label>
-        <button class="button button-primary submit-button" type="submit"><span>Submit Tattoo Request</span><span>↗</span></button>
-        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-      </form>
+      <div class="policy-tape">
+        <article>
+          <span>01</span>
+          <h3>$50 DEPOSIT</h3>
+          <p>Non-refundable and required to secure an approved appointment.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>48 HOURS</h3>
+          <p>Give at least 48 hours notice to move the deposit to a rescheduled appointment.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>90 DAYS</h3>
+          <p>Deposits expire after 90 days under the studio's booking terms.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h3>REQUEST ≠ BOOKING</h3>
+          <p>Annabella reviews style fit, scope, placement, and scheduling before offering a date.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing-signal">
+      <p>READY WHEN YOU ARE.</p>
+      <h2>LET'S MAKE<br>SOMETHING WEIRD.</h2>
+      <div>
+        <a class="button glitch-button" href="book.html">START A REQUEST</a>
+        <a class="venue-link" href="https://venue.ink/@rougecowboyink" target="_blank" rel="noopener noreferrer">OR CONTINUE ON VENUE INK ↗</a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div><span class="footer-mark">†</span><strong>The Scarlet Dagger</strong></div>
-    <p>Private tattoo studio · By appointment only</p>
-    <div class="footer-links"><a href="#top">Top</a><a href="https://venue.ink/@rougecowboyink" target="_blank" rel="noopener noreferrer">Venue Ink</a></div>
+    <div><strong>THE SCARLET DAGGER</strong><span>PRIVATE TATTOO STUDIO</span></div>
+    <p>BLACK + GRAY // ILLUSTRATIVE // BY APPOINTMENT</p>
+    <a href="https://venue.ink/@rougecowboyink" target="_blank" rel="noopener noreferrer">VENUE INK ↗</a>
   </footer>
 
   <script src="script.js"></script>
