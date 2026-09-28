@@ -5,39 +5,39 @@
   <meta name="description" content="Submit a tattoo request to Annabella Tessier at The Scarlet Dagger.">
   <title>Booking | The Scarlet Dagger</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=DM+Mono:wght@300;400;500&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=responsive-20260926-3">
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=DM+Mono:wght@300;400;500&family=UnifrakturMaguntia&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=oldweb-20260928-1">
 </head>
-<body>
+<body class="public-site page-book">
   <div class="scanlines" aria-hidden="true"></div>
   <header class="site-header">
-    <a class="brand" href="index.html"><span class="brand-kicker">PRIVATE STUDIO // EST. 2025</span><strong>THE SCARLET DAGGER</strong></a>
+    <a class="brand" href="index.html"><span class="brand-kicker">private studio · est. 2025</span><strong>The Scarlet Dagger</strong></a>
     <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
-    <nav class="site-nav"><a href="work.html">WORK</a><a href="studio.html">STUDIO</a><a href="before-you-book.html">BEFORE YOU BOOK</a><a class="nav-cta" href="book.html">BOOKING</a></nav>
+    <nav class="site-nav"><a href="work.html">the work</a><a href="studio.html">the studio</a><a href="before-you-book.html">before you book</a><a class="nav-cta" href="book.html">tattoo request</a></nav>
   </header>
 
   <main class="page-wrap">
     <section class="page-intro">
-      <span class="tv-label">BOOKING REQUESTS // CURRENTLY OPEN</span>
-      <h1>TATTOO<br><span class="goth">request.</span></h1>
-      <p>Tell Annabella what you have in mind, and she’ll review your idea to make sure it’s a good fit for her style and schedule. If she’d like to move forward, she’ll reach out using your preferred contact method.</p>
+      <span class="tv-label">booking requests are open</span>
+      <h1>Send me a<br><span class="goth">tattoo idea.</span></h1>
+      <p>Tell Annabella what you have in mind. She’ll look through the idea, placement, size, and schedule, then reach out through your preferred contact method if it feels like a good fit.</p>
     </section>
 
     <section class="page-section booking-layout">
       <aside class="booking-aside">
-        <p class="section-kicker">BEFORE YOU SEND</p>
-        <h2>ABOUT<br>YOUR<br>TATTOO.</h2>
-        <p>The more detail you can share, the better Annabella can understand the piece you’re imagining and how it might translate into a tattoo.</p>
+        <p class="section-kicker">before you send</p>
+        <h2>A note about<br><span class="goth">your tattoo.</span></h2>
+        <p>The more detail you can share, the easier it is for Annabella to picture what you’re imagining and how it could translate into a tattoo.</p>
         <div class="booking-note">
-          <strong>WHAT HELPS MOST</strong>
+          <strong>what helps most</strong>
           <span>→ Clear concept</span>
           <span>→ Placement + approximate size</span>
           <span>→ General availability</span>
           <span>→ Realistic budget</span>
           <span>→ Instagram handle if you use it</span>
         </div>
-        <p><a class="venue-link" href="before-you-book.html">READ THE POLICIES FIRST ↗</a></p>
-        <p><a class="venue-link" href="https://venue.ink/@rougecowboyink" target="_blank" rel="noopener noreferrer">PREFER VENUE INK? GO THERE ↗</a></p>
+        <p><a class="venue-link" href="before-you-book.html">read the house rules first ↗</a></p>
+        <p><a class="venue-link" href="https://venue.ink/@rougecowboyink" target="_blank" rel="noopener noreferrer">prefer Venue Ink? go there ↗</a></p>
       </aside>
 
       <form class="booking-form" id="booking-form">
@@ -50,7 +50,7 @@
           <label><span>APPROXIMATE SIZE *</span><input name="approx_size" type="text" required maxlength="120" placeholder="Example: 4–6 inches"></label>
         </div>
 
-        <label><span>TELL US ABOUT THE TATTOO *</span><textarea name="concept" required minlength="10" maxlength="3000" rows="7" placeholder="Describe the concept, important details, style direction, and anything you definitely do or do not want."></textarea></label>
+        <label><span>TELL ME ABOUT THE TATTOO *</span><textarea name="concept" required minlength="10" maxlength="3000" rows="7" placeholder="Describe the concept, important details, style direction, and anything you definitely do or do not want."></textarea></label>
 
         <div class="form-grid">
           <label><span>AVAILABILITY *</span><textarea name="availability" required maxlength="1000" rows="4" placeholder="Days, time ranges, or scheduling limits."></textarea></label>
@@ -68,13 +68,13 @@
 
         <label class="checkbox-row"><input name="terms_accepted" type="checkbox" required><span>I understand that submitting this form does not confirm an appointment, and I have reviewed the Before You Book policies.</span></label>
 
-        <button class="button glitch-button submit-button" type="submit"><span>SEND REQUEST</span><span>↗</span></button>
+        <button class="button glitch-button submit-button" type="submit"><span>send request</span><span>↗</span></button>
         <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
       </form>
     </section>
   </main>
 
-  <footer class="site-footer"><div><strong>THE SCARLET DAGGER</strong><span>PRIVATE TATTOO STUDIO</span></div><p>BLACK + GRAY // ILLUSTRATIVE // BY APPOINTMENT</p><a href="index.html">HOME ↗</a></footer>
+  <footer class="site-footer"><div><strong>THE SCARLET DAGGER</strong><span>private tattoo studio</span></div><p>black + gray · illustrative · by appointment</p><a href="index.html">home ↗</a></footer>
   <script src="script.js?v=copy-20260926-1"></script>
 </body>
 </html>
